@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #383838;
+  }
+  header .title{
+    margin: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+  }
+  header h1{
+    padding: 20px;
+    border: 1px transparent solid;
+    border-radius: 10px;
+    background: rebeccapurple;
+    box-shadow: 7px 5px 0 #dede57;
+  }
+  .content{
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 5px 4px 0 #ecec79;
+    background: cadetblue;
+  }
+footer{
+    margin-top: 60px;
+    margin-bottom: 2px;
+    font-size: 0.7rem;
+}
+
+
+
+/********** side bar *************/
+
+#side-bar {
+    position: absolute;
+    width: 70px;
+    height: 100%;
+    background: #09fbba;
+    top: 0;
+    left: -95px;
+    transition: 0.5s ease-out;
+    z-index: 4;
+  }
+  .toggle-btn {
+    position: absolute;
+    top: 30px;
+    left: 101px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+  }
+  .toggle-btn span {
+    width: 60px;
+    width: 31px;
+    height: 6px;
+    border-radius: 5px;
+    background: #fbcf09;
+    display: block;
+    margin-top: 4px;
+    transition: 0.3s ease;
+  }
+  li {
+    color: #292929;
+    list-style: none;
+    font-size: 1rem;
+    cursor: pointer;
+    padding-left: 5px;
+  }
+  li:hover {
+    background: #ca2c2cad;
+    color: #fcfcfb;
+  }
+  #side-bar.active{
+    left: 0;
+  }
+  .active span{
+    position: absolute;
+  }
+  .active span:nth-child(1){
+  transform:rotate(45deg);
+  }
+  .active span:nth-child(2){
+    opacity: 0;
+  }
+  .active span:nth-child(3){
+    transform: rotate(-45deg);
+  }
+  /* si active sorti alors content ... */
+  .active ~ .content{
+  opacity: 0.3;
+  }
