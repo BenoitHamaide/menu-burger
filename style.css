@@ -4,14 +4,17 @@
 }
 body {
     background-color: #383838;
+    height: 100vh;
   }
   header .title{
-    margin: 20px;
+    background: url("/img/FR_Manual_v1.1-009_preview_rev_1.png") center/cover;
+    margin: 10px 10px;
     display: flex;
     align-content: center;
     justify-content: center;
     margin-bottom: 50px;
     margin-top: 20px;
+    height: 100px;
   }
   header h1{
     padding: 20px;
@@ -20,14 +23,23 @@ body {
     background: rebeccapurple;
     box-shadow: 7px 5px 0 #dede57;
   }
+  header h2{
+    font-size: 2rem rem;
+    letter-spacing: 2px;
+color: #f7f797;
+margin-bottom: 25px;
+text-align: center;
+-webkit-text-stroke: 1px black
+  }
+  header span{
+    color: whitesmoke;
+  }
   .content{
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
     border: 1px solid transparent;
-    border-radius: 5px;
-    box-shadow: 5px 4px 0 #ecec79;
-    background: cadetblue;
+    background: url("./img/content.png") center/cover;
   }
 footer{
     margin-top: 60px;
@@ -41,38 +53,49 @@ footer{
 
 #side-bar {
     position: absolute;
-    width: 70px;
+    width: 100vh;
     height: 100%;
-    background: #09fbba;
+    background: transparent;
     top: 0;
-    left: -95px;
+    left: -231px;
     transition: 0.5s ease-out;
     z-index: 4;
   }
   .toggle-btn {
     position: absolute;
-    top: 30px;
-    left: 101px;
+    top: 15px;
+    left: 240px;
     cursor: pointer;
-    height: 50px;
-    width: 50px;
+  }
+  #side-bar.active .toggle-btn {
+    position: absolute;
+    top: 15px;
+    left: 310px;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
   }
   .toggle-btn span {
-    width: 60px;
-    width: 31px;
-    height: 6px;
+ 
+    width: 28px;
+    height: 4px;
     border-radius: 5px;
     background: #fbcf09;
     display: block;
     margin-top: 4px;
     transition: 0.3s ease;
   }
+  ul{
+    padding-left: 20px;
+    width: 90px;
+  }
   li {
-    color: #292929;
+    color: whitesmoke;
     list-style: none;
     font-size: 1rem;
     cursor: pointer;
     padding-left: 5px;
+    margin-top: 40px;
   }
   li:hover {
     background: #ca2c2cad;
@@ -80,18 +103,22 @@ footer{
   }
   #side-bar.active{
     left: 0;
+    background: rgb(83, 83, 82) ;
   }
+  
   .active span{
     position: absolute;
   }
   .active span:nth-child(1){
   transform:rotate(45deg);
+  background: red;
   }
   .active span:nth-child(2){
     opacity: 0;
   }
   .active span:nth-child(3){
     transform: rotate(-45deg);
+    background: red;
   }
   /* si active sorti alors content ... */
   .active ~ .content{
